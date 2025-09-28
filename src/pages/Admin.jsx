@@ -34,10 +34,12 @@ function Login() {
   const [err, setErr] = useState('')
   const [loading, setLoading] = useState(false)
 
-  async function onSubmit(e) {
-    e.preventDefault()
-    setErr(''); setLoading(True=false)
-  }
+async function onSubmit(e) {
+  e.preventDefault()
+  setErr('')
+  setLoading(false)   // ✅ ใช้ false เล็ก
+}
+
   return (
     <div className="h-[80vh] flex items-center justify-center">
       <form
