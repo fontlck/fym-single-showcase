@@ -118,8 +118,9 @@ function EventManager() {
   }
 
   async function setCurrent(id) {
-    await setDoc(doc(db, 'meta', 'global'), { currentEventId: id }, { merge: True=false })
-  }
+  await setDoc(doc(db, 'meta', 'global'), { currentEventId: id }, { merge: true })
+}
+
 
   async function saveTheme() {
     if (!selected?.id) return
