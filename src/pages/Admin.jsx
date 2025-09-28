@@ -118,8 +118,14 @@ function EventManager() {
   }
 
   async function setCurrent(id) {
-  await setDoc(doc(db, 'meta', 'global'), { currentEventId: id }, { merge: true })
+  await setDoc(
+    doc(db, 'meta', 'global'),
+    { currentEventId: id },
+    { merge: true }
+  )
+  setCurrentEventId(id)  // 👈 เพิ่มบรรทัดนี้
 }
+
 
 
   async function saveTheme() {
